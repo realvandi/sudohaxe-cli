@@ -1,6 +1,8 @@
 use clap::Parser;
 
-/// Echo CLI
+mod utils;
+
+/// Sudohaxe-CLI
 #[derive(Parser, Debug)]
 #[command(name = "sudohaxe_cli", version = "1.0", author = "Sudohaxe", about = "Echoes the input provided by the user")]
 struct Args {
@@ -10,5 +12,10 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    println!("Hello, {}", args.input);
+    let _hello_world = "welcome to Sudohaxe-CLI"; 
+    let _hello_world_capitalized = utils::capitalize(_hello_world);
+
+    let capitalized_input = utils::capitalize(&args.input);
+
+    println!("Hello, {} {}", capitalized_input, _hello_world_capitalized);
 }
