@@ -17,5 +17,9 @@ fn main() {
 
     let capitalized_input = utils::capitalize(&args.input);
 
-    println!("Hello, {} {}", capitalized_input, _hello_world_capitalized);
+    let fibonacci_result = utils::fibonacci_reccursive(10);
+
+    println!("Hello, {} {} {}", capitalized_input, _hello_world_capitalized, fibonacci_result);
 }
+
+
