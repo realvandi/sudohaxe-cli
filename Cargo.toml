@@ -1,5 +1,5 @@
 [package]
-name = "echo_cli"
+name = "sudohaxe_cli"
 version = "0.1.0"
 edition = "2021"
 
