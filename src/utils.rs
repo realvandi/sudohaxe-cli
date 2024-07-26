@@ -1,5 +1,3 @@
-//utils.rs
-
 pub fn capitalize(input: &str) -> String {
     let mut c = input.chars();
     match c.next() {
@@ -17,5 +15,24 @@ pub fn fibonacci_reccursive(n: i32) -> u64 {
         1 | 2 => 1,
         3 => 2,
         _ => fibonacci_reccursive(n - 1) + fibonacci_reccursive(n - 2),
+    }
+}
+
+trait Animal {
+    fn speak(&self); 
+    fn name(&self) -> &str;
+}
+
+struct Dog {
+    name: String
+}
+
+impl Animal for Dog {
+    fn speak(&self){
+        println!("Woof! My name is {}", self.name)
+    } 
+
+    fn name(&self) -> &str{
+        &self.name
     }
 }
